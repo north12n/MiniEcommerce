@@ -1,3 +1,38 @@
+/* .products {
+  padding: 2rem;
+}
+.products h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.product-grid div {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.product-grid button {
+  background: #4facfe;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.product-grid button:hover {
+  background: #00c6ff;
+} */
+
+
+/* ===== Section สินค้า ===== */
 .products {
   padding: 2rem;
 }
@@ -8,12 +43,33 @@
   text-align: center;
 }
 
+/* ===== Grid Layout ===== */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* Desktop: 4 การ์ดต่อแถว */
   gap: 1.5rem;
 }
 
+/* Responsive */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Desktop: 4 การ์ดต่อแถว */
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* Tablet: 2 */
+  }
+}
+
+@media (max-width: 640px) {
+  .product-grid {
+    grid-template-columns: repeat(1, 1fr); /* Mobile: 1 */
+  }
+}
+
+/* ===== Card Style ===== */
 .product-card {
   background: #fff;
   border: 1px solid #eee;

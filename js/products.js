@@ -33,12 +33,20 @@ function showProducts() {
 
   products.forEach((p) => {
     let div = document.createElement("div");
-    div.className = "product-card";
+    div.className = "card bg-base-100 shadow-md"; // ✅ ใช้ card ของ DaisyUI
     div.innerHTML = `
-      <img src="${p.image}" alt="${p.name}" class="product-img"/>
-      <h3>${p.name}</h3>
-      <p>${p.price}฿</p>
-      <button onclick="addToCart(${p.id})">เพิ่มลงตะกร้า</button>
+      <figure>
+        <img src="${p.image}" alt="${p.name}" class="h-48 w-full object-cover"/>
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">${p.name}</h2>
+        <p class="text-blue-600 font-bold">${p.price}฿</p>
+        <div class="card-actions justify-end">
+          <button onclick="addToCart(${p.id})" class="btn btn-primary btn-sm">
+            เพิ่มลงตะกร้า
+          </button>
+        </div>
+      </div>
     `;
     productList.appendChild(div);
   });
