@@ -1,24 +1,107 @@
+/* 🎨 ตะกร้าสินค้าใหญ่ (cart.html) */
 .cart {
-  background: #f9f9f9;
+  background: #f9fafb;
   padding: 2rem;
-  border-top: 2px solid #eee;
+  border-radius: 8px;
+  max-width: 900px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
+
 .cart h2 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 1rem;
+  font-weight: 600;
+  color: #111827;
+  text-align: center;
 }
-.cart button {
-  background: crimson;
-  color: white;
+
+/* รายการสินค้า */
+.cart-item {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.cart-item:hover {
+  background: #f3f4f6;
+}
+
+/* ปุ่มใน cart */
+.cart-item button {
+  margin: 0 2px;
+  padding: 0.3rem 0.6rem;
   border: none;
-  padding: 0.3rem 0.7rem;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
+  font-size: 0.85rem;
 }
-.cart button:hover {
-  background: darkred;
+
+.cart-item .btn-xs {
+  background: #e5e7eb;
+  color: #111827;
 }
-.cart select {
-  padding: 0.5rem;
+
+.cart-item .btn-xs:hover {
+  background: #d1d5db;
+}
+
+.cart-item .btn-error {
+  background: #ef4444;
+  color: white;
+}
+
+.cart-item .btn-error:hover {
+  background: #dc2626;
+}
+
+/* สรุปยอด */
+#total, #summary {
   margin-top: 1rem;
+  font-size: 1rem;
+  color: #111827;
+}
+
+#summary p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+/* 🎨 Mini Cart (บน header) */
+#miniCartList {
+  max-height: 150px;
+  overflow-y: auto;
+  margin-bottom: 0.5rem;
+}
+
+#miniCartList div {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+}
+
+#miniCartList div:last-child {
+  border-bottom: none;
+}
+
+#miniCartTotal {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #16a34a; /* เขียวสวย ๆ */
+}
+
+#miniCartCount,
+#miniCartCountText {
+  background: #ef4444; /* แดง Shopee */
+  color: white;
+  font-weight: bold;
 }

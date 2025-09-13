@@ -1,14 +1,33 @@
-<section class="cart">
-  <h2>ตะกร้าสินค้า</h2>
-  <div id="cartList"></div>
-  <div id="total"></div>
-  <h3>เลือกการจัดส่ง</h3>
-  <select id="shippingSelect" name="shipping" aria-label="เลือกการจัดส่ง">
-      <option value="normal">ธรรมดา (50฿)</option>
-      <option value="express">ด่วน (100฿)</option>
-      <option value="free">ฟรี (0฿)</option>
-  </select>
-  <div id="summary"></div>
-</section>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ตะกร้าสินค้า - Mini E-commerce</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div id="header"></div>
 
-<link rel="stylesheet" href="styles/cart.css">
+  <section class="cart">
+    <h2>ตะกร้าสินค้า</h2>
+    <div id="cartList"></div>
+    <div id="total"></div>
+    <h3>เลือกการจัดส่ง</h3>
+    <select id="shippingSelect" name="shipping" aria-label="เลือกการจัดส่ง">
+        <option value="normal">ธรรมดา (50฿)</option>
+        <option value="express">ด่วน (100฿)</option>
+        <option value="free">ฟรี (0฿)</option>
+    </select>
+    <div id="summary"></div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
